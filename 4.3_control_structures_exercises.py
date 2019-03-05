@@ -194,6 +194,12 @@
 # books.append({"title":'The Hunger Games', "author":'Suzanne Collins', 'genre':'Science Fiction'})
 # books.append({"title":"To All the Boys I've Loved Before", 'author':'Jenny Han', 'genre':'Romance'})
 
+# for book in books:
+#     print('-----------')
+#     print('    title: %s' % book['title'])
+#     print('    author: %s' % book['author'])
+#     print('    genre: %s' % book['genre'])
+
 
 # genre = input("What Genre would you like?")
 # print(f"Books with the genre: {genre}")
