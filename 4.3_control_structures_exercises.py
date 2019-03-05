@@ -58,8 +58,8 @@
 # 2 4 16 256 65536
 # x = 2
 # while x < 1_000_000:
-#     print(x) 
-#     x = x * x 
+#     print(x)
+#     x = x * x
 
 # Write a loop that uses print to create the output shown below.
 # counter = 100
@@ -81,11 +81,9 @@
 
 # Create a for loop that uses print to create the output shown below.
 # count = 1
-# increment = 1
 # for n in range(count):
 #     while count <=9:
-#         print(f'{str(count)*increment}')
-#         increment += 1
+#         print(f'{str(count)*count}')
 #         count +=1
 
 # 2c break and continue
@@ -100,7 +98,7 @@
 # for n in range(1,51):
 #     if n == int(user_num):
 #         print(f'Yikes! Skipping number: {user_num}')
-#         continue 
+#         continue
 #     else:
 #         if n % 2 != 0 and n != user_num:
 #             print(f'Here is an odd number: {n}')
@@ -161,19 +159,44 @@
 # for n in range(1,user_input + 1):
 #     print(f'{n}      | {n*n}     | {n*n*n}')
 
+# Bonus: Research python's format string specifiers to align the table
+
+# 5 Convert given number grades into letter grades.
+# Prompt the user for a numerical grade from 0 to 100.
+# Display the corresponding letter grade.
+# Prompt the user to continue.
+# Assume that the user will enter valid integers for the grades.
+# The application should only continue if the user agrees to.
+# Grade Ranges:
+# A : 100 - 88
+# B : 87 - 80
+# C : 79 - 67
+# D : 66 - 60
+# F : 59 - 0
+# while True:
+#     grade = input('Please input a grade from 0 to 100: ')
+#     if grade.isdigit() and int(grade) > 0 and int(grade) <= 100:
+#         grade = int(grade)
+#         if grade >= 88 and grade <= 100: print('A')
+#         if grade >= 80 and grade <= 87: print('B')
+#         if grade >= 67 and grade <= 79: print('C')
+#         if grade >= 60 and grade <= 66: print('D')
+#         if grade <= 59: print('F')
+#         exit = input('Do you want to exit?')
+#         if exit.lower() == 'yes' or exit.lower() == 'y':
+#             break
+#         elif exit.lower() == 'no' or exit.lower() == 'n':
+#             continue
+
+# 6 Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
+# Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+# books = [{"title":"Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "genre":"Fantasy"}]
+# books.append({"title":'The Hunger Games', "author":'Suzanne Collins', 'genre':'Science Fiction'})
+# books.append({"title":"To All the Boys I've Loved Before", 'author':'Jenny Han', 'genre':'Romance'})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# genre = input("What Genre would you like?")
+# print(f"Books with the genre: {genre}")
+# for i in books:
+#     if i['genre'].lower() == genre.lower():
+#         print(i['title'])
