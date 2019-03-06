@@ -139,11 +139,20 @@
 # Name will become name
 # First Name will become first_name
 # % Completed will become completed
-# def normalize_name(name):
-#     return ((name.lower()).strip()).replace(' ', '_')
 
-# print(normalize_name('   KATY SALTS '))
-# print(normalize_name('   % Completed '))
+# LETTERS = ' _abcdefghijklmnopqrstuvwxyz0123456789'
+
+# def normalize_name(a_string):
+#     a_string = a_string.lower()
+#     valid_characters = []
+#     for character in a_string:
+#         if character in LETTERS:
+#             valid_characters.append(character)
+#     return ''.join(valid_characters).strip().replace(' ', '_')
+
+# print(normalize_name('    Name'))
+# print(normalize_name('First Name'))
+# print(normalize_name('% Completed'))
 
 # 11. Write a function named cumsum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 # cumsum([1, 1, 1]) returns [1, 2, 3]
@@ -164,6 +173,19 @@
 # numbers3 = [4,8,10,25]
 # numbers4 = [8,3,0,12,47]
 # print(cumsum(numbers4))
+
+#### OR ####
+# def cumsum(numbers):
+#     sums = []
+#     for current_number in numbers[1:]:
+#         last_number = sums[-1]
+#         next_number = last_number + current_number
+#         sums.append(next_number)
+#     return sums
+
+#### OR ####
+# def cumsum(num_list):
+#     return [sum(num_list[: i + 1]) for i in range(len(num_list))]
 
 # BONUS 11. Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. Bonus write a function that does the opposite.
 # def twelveto24(time):
@@ -186,8 +208,4 @@
 # col_index('A') returns 1
 # col_index('B') returns 2
 # col_index('AA') returns 27
-# def col_index(index):
-#     alpha = ('ABCD')
-#     return len.index(alpha)
 
-# print(col_index('B'))
